@@ -10,7 +10,9 @@
     "dev": "tsx src/main.ts",
     "check": "biome check",
     "check:fix": "biome check --write",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:build": "docker build -t discord-stream-svc .",
+    "docker:start": "docker run --name discord-stream-svc discord-stream-svc"
   },
   "keywords": [],
   "author": "",
