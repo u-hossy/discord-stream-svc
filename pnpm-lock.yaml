@@ -18,6 +18,9 @@ importers:
       '@types/node':
         specifier: ^25.1.0
         version: 25.1.0
+      '@vercel/ncc':
+        specifier: ^0.38.4
+        version: 0.38.4
       tsx:
         specifier: ^4.21.0
         version: 4.21.0
@@ -282,6 +285,10 @@ packages:
   '@types/ws@8.18.1':
     resolution: {integrity: sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==}
 
+  '@vercel/ncc@0.38.4':
+    resolution: {integrity: sha512-8LwjnlP39s08C08J5NstzriPvW1SP8Zfpp1BvC2sI35kPeZnHfxVkCwu4/+Wodgnd60UtT1n8K8zw+Mp7J9JmQ==}
+    hasBin: true
+
   '@vladfrangu/async_event_emitter@2.4.7':
     resolution: {integrity: sha512-Xfe6rpCTxSxfbswi/W/Pz7zp1WWSNn4A0eW4mLkQUewCrXXtMj31lCg+iQyTkh/CkusZSq9eDflu7tjEDXUY6g==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
@@ -536,6 +543,8 @@ snapshots:
   '@types/ws@8.18.1':
     dependencies:
       '@types/node': 25.1.0
+
+  '@vercel/ncc@0.38.4': {}
 
   '@vladfrangu/async_event_emitter@2.4.7': {}
 
