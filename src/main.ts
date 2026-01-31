@@ -2,6 +2,11 @@ import { Client, Events, GatewayIntentBits } from "discord.js";
 
 const token = process.env.DISCORD_TOKEN;
 
+if (!token) {
+  console.trace("DISCORD_TOKEN must be given.");
+  process.exit(1);
+}
+
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
