@@ -1,6 +1,27 @@
 import { Client, Events, GatewayIntentBits } from "discord.js";
+import { registerGlobalCommands } from "./utils/register-global-commands";
 
 const token = process.env.DISCORD_TOKEN;
+
+if (!token) {
+  console.trace("DISCORD_TOKEN must be given.");
+  process.exit(1);
+}
+
+// Deploy global commands
+try {
+  await registerGlobalCommands();
+} catch (e) {
+  console.error("Error has occurred in deploying commands:");
+  if (e instanceof Error) {
+    console.error(`Message: ${e.message}`);
+    if (e.stack) {
+      console.error(`Stack trace:\n${e.stack}`);
+    }
+  } else {
+    console.error("Unknown error:", e);
+  }
+}
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
