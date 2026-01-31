@@ -1,6 +1,7 @@
 /**
  * Deploy slash commands
  */
-export function registerGlobalCommands() {
+export async function registerGlobalCommands() {
+  // await rest.put(Routes.applicationCommands(clientId), { body: commands });
   console.log("hello, registerGlobalCommands");
 }

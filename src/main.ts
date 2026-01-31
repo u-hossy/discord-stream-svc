@@ -10,7 +10,7 @@ if (!token) {
 
 // Deploy global commands
 try {
-  registerGlobalCommands();
+  await registerGlobalCommands();
 } catch (e) {
   console.error("Error has occurred in deploying commands:");
   if (e instanceof Error) {
